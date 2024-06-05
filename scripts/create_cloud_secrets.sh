@@ -100,7 +100,7 @@ PROXY_KEY_FILE="${PROXY_TLS_CERTS}/server.key"
 mkcert \
   -cert-file "${PROXY_CERT_FILE}" \
   -key-file "${PROXY_KEY_FILE}" \
-  dev.withpixie.dev "*.dev.withpixie.dev" localhost 127.0.0.1 ::1
+  finsight "*.finsight" localhost 127.0.0.1 ::1
 
 kubectl create secret tls -n "${namespace}" \
   cloud-proxy-tls-certs \
